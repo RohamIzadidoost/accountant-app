@@ -12,3 +12,6 @@ def index(request):
         'transactions' : p.page(1).object_list
     }
     return render(request , 'main/main.html' , context)
+
+def AddTrans(request):
+    return HttpResponse("You are adding transaction") 

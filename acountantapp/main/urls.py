@@ -4,4 +4,5 @@ from . import views
 app_name= 'page1'
 urlpatterns = [
         path('' , views.index , name='index') , 
+        path('addtrans' , views.AddTrans , name='AddTrans') ,  
         ]

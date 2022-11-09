@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
+    <link rel="stylesheet"  href="{% static 'main/main.css' %}" />
     <meta charset="UTF-8">
     <title>حساب</title>
 </head>
@@ -8,21 +10,35 @@
     <table>
         <thead>
         <tr>
+            <!--
             <th>تاریخ</th>
             <th>توضیحات</th>
             <th>بدهکار</th>
             <th>بستانکار</th>
             <th>مانده</th>
+            -->
+            <th>مانده</th>
+            <th>بستانکار</th>
+            <th>بدهکار</th>
+            <th>توضیحات</th>
+            <th>تاریخ</th>
         </tr>
         </thead>
         <tbody id="maintable">
             {% for t in transactions %}
                 <tr>
+                    <!--
                     <td>{{ t.date }}</td>
                     <td>{{ t.exp }}</td>
                     <td>{{ t.deb }}</td>
                     <td>{{ t.cred }}</td>
                     <td>{{ t.remain }}</td>
+                    -->
+                    <td>{{ t.remain }}</td>
+                    <td>{{ t.cred }}</td>
+                    <td>{{ t.deb }}</td>
+                    <td>{{ t.exp }}</td>
+                    <td>{{ t.date }}</td>
                 </tr>
             {% endfor %}
         </tbody>
